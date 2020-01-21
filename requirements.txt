@@ -1,0 +1,5 @@
+pytest==3.0.7
+pytest-cov==2.5.1
+PyGithub==1.44
+flake8==3.7.9
+flake8-quotes==2.0.0
