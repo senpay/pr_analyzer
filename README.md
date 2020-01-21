@@ -41,7 +41,7 @@ optional arguments:
   --top [top]          If given - returns up to `top` PRs starting from the oldest
 ```
 
-![GitHub CI](https://github.com/senpay/pr_helper/workflows/ci/badge.svg)
+![GitHub CI](https://github.com/senpay/pr_analyzer/workflows/ci/badge.svg)
   
  
 [![Azure Pipeline](https://apushkarev.visualstudio.com/pr%20analyzer/_apis/build/status/Alex%20Pushkarev%20CI-Python%20package-CI)](https://apushkarev.visualstudio.com/pr%20analyzer/_build/latest?definitionId=2)
