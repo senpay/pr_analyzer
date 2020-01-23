@@ -1,7 +1,7 @@
 import github
 from github import Github
 
-from application.model import PullRequest
+from pr_analyzer.application.model import PullRequest
 import configuration
 
 g = Github(configuration.token)

@@ -3,9 +3,10 @@ from statistics import mean
 from unittest import mock
 from unittest.mock import MagicMock
 
-from application import pr_analyzer
-from application.model import PullRequest
-from application.pr_analyzer import _get_lead_time, get_prs_statistics, get_open_prs, get_prs_leadtime_statistics
+from pr_analyzer.application import pr_analyzer
+from pr_analyzer.application.model import PullRequest
+from pr_analyzer.application.pr_analyzer import _get_lead_time, get_prs_statistics, get_open_prs, \
+    get_prs_leadtime_statistics
 
 
 def test_get_open_prs():

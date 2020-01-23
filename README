@@ -1,0 +1,5 @@
+Imagine that you work on a project, and your Pull Requests don't get reviewed fast enough. Is it just that odds were
+against you, or in this project Pull Requests are usually not reviewed in a timely fashion?
+
+PR Analyzer is a small set of command line utilities for analyzing Pull Requests in the GitHub, and it should help you
+to find an answer for the question above.

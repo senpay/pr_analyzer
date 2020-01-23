@@ -1,8 +1,8 @@
 from datetime import timedelta, datetime
 from statistics import mean
 
-from adapters.github_adapter import get_prs
-from application.model import PullRequest
+from pr_analyzer.adapters.github_adapter import get_prs
+from pr_analyzer.application.model import PullRequest
 
 
 def get_open_prs(repository_url: str, created: int = None, updated: int = None) -> list:

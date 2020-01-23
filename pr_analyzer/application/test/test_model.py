@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 
-from application.model import PullRequest
+from pr_analyzer.application.model import PullRequest
 
 
 def test_pr_helper_repr():
