@@ -21,6 +21,9 @@ setup(
     license='MIT',
     url='http://packages.python.org/pr_analyzer',
     packages=['pr_analyzer', 'pr_analyzer.adapters', 'pr_analyzer.application'],
-    scripts=['pr_analyzer/list_prs.py', 'pr_analyzer/print_stats.py'],
-    long_description=read('README')
+    scripts=['list_prs', 'print_stats'],
+    long_description=read('README'),
+    install_requires=[  # I get to this in a second
+        'PyGithub==1.44'
+    ],
 )
