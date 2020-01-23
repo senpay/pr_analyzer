@@ -13,13 +13,12 @@ def read(fname):
 
 
 setup(
-    name='an_example_pypi_project',
+    name='pr_analyzer',
     version=version.VERSION,
-    author='Alexander Pushkare',
+    author='Alexander Pushkarev',
     author_email='alexspush@gmail.com',
     description='Small CLI to analyze PRs on the GitHub',
     license='MIT',
-    keywords='example documentation tutorial',
     url='http://packages.python.org/pr_analyzer',
     packages=['pr_analyzer', 'pr_analyzer.adapters', 'pr_analyzer.application'],
     scripts=['pr_analyzer/list_prs.py', 'pr_analyzer/print_stats.py'],
