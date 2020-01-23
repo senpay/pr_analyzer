@@ -13,14 +13,14 @@ def read(fname):
 
 
 setup(
-    name="an_example_pypi_project",
+    name='an_example_pypi_project',
     version=version.VERSION,
-    author="Alexander Pushkare",
-    author_email="alexspush@gmail.com",
-    description="Small CLI to analyze PRs on the GitHub",
-    license="MIT",
-    keywords="example documentation tutorial",
-    url="http://packages.python.org/pr_analyzer",
-    packages=['pr_analyzer', 'tests'],
+    author='Alexander Pushkare',
+    author_email='alexspush@gmail.com',
+    description='Small CLI to analyze PRs on the GitHub',
+    license='MIT',
+    keywords='example documentation tutorial',
+    url='http://packages.python.org/pr_analyzer',
+    packages=['pr_analyzer'],
     long_description=read('README')
 )
