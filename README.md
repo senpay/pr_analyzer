@@ -13,12 +13,9 @@ Using **PR Analyzer** you will be able:
 ***Note:*** Please be aware that the tool is currently under active development.
 
 # Installation
-As for now there's no easy way (i.e. pip) to install. For now, please use:
+You can install pr_analyzer using pip:
 ```
-$git clone https://github.com/senpay/pr_helper.git
-$cd pr_helper
-$./setup.sh
-$.env/bin/activate
+$ pip install pr_analyzer
 ```
 
 # Available commands
