@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import argparse
 
 from pr_analyzer.application.pr_analyzer import get_prs_statistics, get_prs_leadtime_statistics

@@ -21,6 +21,7 @@ setup(
     license='MIT',
     keywords='example documentation tutorial',
     url='http://packages.python.org/pr_analyzer',
-    packages=['pr_analyzer'],
+    packages=['pr_analyzer', 'pr_analyzer.adapters', 'pr_analyzer.application'],
+    scripts=['pr_analyzer/list_prs.py', 'pr_analyzer/print_stats.py'],
     long_description=read('README')
 )
