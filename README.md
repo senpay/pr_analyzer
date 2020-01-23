@@ -18,6 +18,12 @@ You can install pr_analyzer using pip:
 $ pip install pr_analyzer
 ```
 
+GitHub token is required for the pr_analyzer to be able to use GitHub API:
+```
+$ set GITHUB_TOKEN=your_token_value
+```
+
+
 # Available commands
 ## list_prs.py
 
