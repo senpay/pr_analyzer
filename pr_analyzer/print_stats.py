@@ -1,7 +1,7 @@
 import argparse
 
-from application.pr_analyzer import get_prs_statistics, get_prs_leadtime_statistics
-from common import print_info_message
+from pr_analyzer.application.pr_analyzer import get_prs_statistics, get_prs_leadtime_statistics
+from pr_analyzer.common import print_info_message
 
 
 def print_prs_statistics(url: str):

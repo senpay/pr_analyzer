@@ -1,4 +1,4 @@
-import version
+from pr_analyzer import version
 
 
 def print_info_message():

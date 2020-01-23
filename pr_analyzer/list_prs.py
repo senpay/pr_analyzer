@@ -1,7 +1,7 @@
 import argparse
 
-from application.pr_analyzer import get_open_prs
-from common import print_info_message
+from pr_analyzer.application.pr_analyzer import get_open_prs
+from pr_analyzer.common import print_info_message
 
 print_info_message()
 

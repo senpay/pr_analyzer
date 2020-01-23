@@ -1,7 +1,7 @@
 from unittest.mock import MagicMock
 
-from adapters.github_adapter import get_prs, _get_prs
-from adapters import github_adapter
+from pr_analyzer.adapters.github_adapter import get_prs, _get_prs
+from pr_analyzer.adapters import github_adapter
 
 
 def test_get_prs():
