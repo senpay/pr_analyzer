@@ -14,12 +14,12 @@ Using **PR Analyzer** you will be able:
 
 # Installation
 You can install pr_analyzer using pip:
-```
-$ pip install pr_analyzer
+```bash
+$ pip install pr-analyzer
 ```
 
 GitHub token is required for the pr_analyzer to be able to use GitHub API:
-```
+```bash
 $ set GITHUB_TOKEN=your_token_value
 ```
 
