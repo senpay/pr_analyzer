@@ -25,9 +25,9 @@ $ set GITHUB_TOKEN=your_token_value
 
 
 # Available commands
-## list_prs.py
+## list_prs
 
-```
+```bash
 usage: $python list_prs.py [-h] [--created [created]] [--updated [updated]]
                            [--top [top]]
                            url [url ...]
@@ -44,6 +44,17 @@ optional arguments:
   --top [top]          If given - returns up to `top` PRs starting from the oldest
 ```
 
+## print_stats
+```bash
+Prints statistics about pull requests activity for given repositories
+
+positional arguments:
+  url         repository url
+
+optional arguments:
+  -h, --help  show this help message and exit
+
+```
 ![GitHub CI](https://github.com/senpay/pr_analyzer/workflows/ci/badge.svg)
   
  
