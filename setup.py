@@ -22,7 +22,7 @@ setup(
     url='http://packages.python.org/pr_analyzer',
     packages=['pr_analyzer', 'pr_analyzer.adapters', 'pr_analyzer.application'],
     scripts=['list_prs', 'print_stats'],
-    long_description=read('README'),
+    long_description=read('README.md'),
     install_requires=[
         'PyGithub==1.44'
     ],
