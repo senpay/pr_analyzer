@@ -59,3 +59,5 @@ optional arguments:
   
  
 [![Azure Pipeline](https://apushkarev.visualstudio.com/pr%20analyzer/_apis/build/status/Alex%20Pushkarev%20CI-Python%20package-CI)](https://apushkarev.visualstudio.com/pr%20analyzer/_build/latest?definitionId=2)
+
+![](https://img.shields.io/pypi/dm/pr-analyzer.svg)
