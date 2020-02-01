@@ -23,6 +23,7 @@ setup(
     packages=['pr_analyzer', 'pr_analyzer.adapters', 'pr_analyzer.application'],
     scripts=['list_prs', 'print_stats'],
     long_description=read('README.md'),
+    long_description_content_type='text/markdown',
     install_requires=[
         'PyGithub==1.44'
     ],
