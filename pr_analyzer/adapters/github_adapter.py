@@ -1,5 +1,3 @@
-import os
-
 import github
 from github import Github
 from just_config.configuration import Configuration
