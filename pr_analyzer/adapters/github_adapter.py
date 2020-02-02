@@ -2,10 +2,13 @@ import os
 
 import github
 from github import Github
+from just_config.configuration import Configuration
 
 from pr_analyzer.application.model import PullRequest
 
-g = Github(os.getenv('GITHUB_TOKEN'))
+cfg = Configuration()
+github_token = cfg['GITHUB_TOKEN']
+g = Github(github_token)
 
 
 def get_prs(repository_url: str, closed=False) -> list:
