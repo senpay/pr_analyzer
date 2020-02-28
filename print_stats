@@ -25,6 +25,8 @@ parser.add_argument('url', metavar='url', type=str, nargs='+',
 args = parser.parse_args()
 
 for url in args.url:
+    if url[-1] == '/':
+        url = url[:-1]
     print(f'Statistics for the repository: {url}')
     print_prs_statistics(url)
     print_prs_leadtime_statistics(url)

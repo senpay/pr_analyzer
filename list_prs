@@ -20,6 +20,8 @@ parser.add_argument('--top', metavar='top', type=int, nargs='?',
 args = parser.parse_args()
 
 for url in args.url:
+    if url[-1] == '/':
+        url = url[:-1]
     print(f'List PRs for the repository: {url}')
     prs = get_open_prs(url, args.created, args.updated)
     if args.top and args.top < len(prs):
