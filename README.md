@@ -28,9 +28,8 @@ $ set GITHUB_TOKEN=your_token_value
 ## list_prs
 
 ```bash
-usage: $python list_prs.py [-h] [--created [created]] [--updated [updated]]
-                           [--top [top]]
-                           url [url ...]
+usage: list_prs [-h] [--created [created]] [--updated [updated]] [--top [top]]
+                url [url ...]
 
 Prints list of open pull requests for given repositories
 
@@ -39,13 +38,18 @@ positional arguments:
 
 optional arguments:
   -h, --help           show this help message and exit
-  --created [created]  If given - will show PRs created more than `created` days ago
-  --updated [updated]  If given - will show PRs updated more than `updated` days ago
-  --top [top]          If given - returns up to `top` PRs starting from the oldest
+  --created [created]  If given - will show PRs created more than `created`
+                       days ago
+  --updated [updated]  If given - will show PRs updated more than `updated`
+                       days ago
+  --top [top]          If given - returns up to `top` PRs starting from the
+                       oldest
 ```
 
 ## print_stats
 ```bash
+usage: print_stats [-h] url [url ...]
+
 Prints statistics about pull requests activity for given repositories
 
 positional arguments:
@@ -53,7 +57,6 @@ positional arguments:
 
 optional arguments:
   -h, --help  show this help message and exit
-
 ```
 ![GitHub CI](https://github.com/senpay/pr_analyzer/workflows/ci/badge.svg)
   
