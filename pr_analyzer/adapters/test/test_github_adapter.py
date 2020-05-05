@@ -14,6 +14,7 @@ def test_get_prs():
     # Assert
     assert len(actual_pulls) == 1
     assert actual_pulls[0].created == 'created'
+    assert actual_pulls[0].closed == 'closed'
     assert actual_pulls[0].updated == 'updated'
     assert actual_pulls[0].merged == 'merged'
     assert actual_pulls[0].title == 'title'
@@ -45,6 +46,7 @@ def get_pulls():
     pull = MagicMock()
 
     pull.created_at = 'created'
+    pull.closed_at = 'closed'
     pull.updated_at = 'updated'
     pull.merged_at = 'merged'
     pull.title = 'title'

@@ -6,6 +6,7 @@ class PullRequest:
     - Date when PR was opened
     - Date when PR was updated
     - Date when PR was merged
+    - Date when PR was closed
     - PR reviewer's emails
     - PR author
     - PR title

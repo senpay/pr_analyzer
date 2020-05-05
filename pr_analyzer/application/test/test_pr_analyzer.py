@@ -12,7 +12,8 @@ from pr_analyzer.application.pr_analyzer import _get_lead_time, get_prs_statisti
 def test_get_open_prs():
     # Arrange
     pr_analyzer.get_prs = MagicMock()
-    expected_prs = get_pulls([1, 2, 3], [1, 2, 3])
+    expected_prs = get_pulls([1, 2, 3], [1, 2, 3], [1, 2, 3])
+
     pr_analyzer.get_prs.side_effect = [expected_prs]
 
     # Act
@@ -31,6 +32,7 @@ def test_get_open_prs_with_created():
     pr_analyzer.get_prs.side_effect = [get_pulls([created_1,
                                                   created_2,
                                                   datetime.now() + timedelta(days=-1)],
+                                                 [1, 2, 3],
                                                  [1, 2, 3])]
 
     # Act
@@ -51,7 +53,7 @@ def test_get_open_prs_with_updated():
                                                  [updated_1,
                                                   updated_2,
                                                   datetime.now() + timedelta(days=-1)],
-                                                 )]
+                                                 [1, 2, 3])]
 
     # Act
     result = get_open_prs('/user/repository', updated=2)
@@ -65,13 +67,17 @@ def test_get_open_prs_with_updated():
 def test__get_prs_statistics():
     # Arrange
     pr_analyzer.get_prs = MagicMock()
-    pr_analyzer.get_prs.side_effect = [[1, 2, 3], [1, 2]]
+    pr_mock = MagicMock()
+    pr_mock.merged = True
+    pr_mock_not_merged = MagicMock()
+    pr_mock_not_merged.merged = False
+    pr_analyzer.get_prs.side_effect = [[pr_mock, pr_mock, pr_mock_not_merged], [pr_mock, pr_mock]]
 
     # Act
     result = get_prs_statistics('/user/repository')
 
     # Assert
-    assert result == (2, 3)
+    assert result == (2, 2, 1)
     calls = [mock.call('/user/repository', closed=True), mock.call('/user/repository')]
     pr_analyzer.get_prs.assert_has_calls(calls)
 
@@ -79,7 +85,9 @@ def test__get_prs_statistics():
 def test_get_prs_leadtime_statistics():
     # Arrange
     pr_analyzer.get_prs = MagicMock()
-    result_list = [1, 2, 10]
+    pr_mock = MagicMock()
+    pr_mock.merged = True
+    result_list = [pr_mock, pr_mock, pr_mock]
     pr_analyzer.get_prs.side_effect = [result_list]
     pr_analyzer._get_lead_time = MagicMock()
     pr_analyzer._get_lead_time.side_effect = [1, 2, 10]
@@ -88,7 +96,7 @@ def test_get_prs_leadtime_statistics():
     result = get_prs_leadtime_statistics('/user/repository')
 
     # Assert
-    assert result == tuple([timedelta(seconds=res) for res in (int(mean(result_list)), 1, 10)])
+    assert result == tuple([timedelta(seconds=res) for res in (4, 1, 10)])
 
 
 def test__get_lead_time() -> int:
@@ -99,7 +107,7 @@ def test__get_lead_time() -> int:
     assert 86931 == _get_lead_time(pr)
 
 
-def get_pulls(created: list, updated: list):
+def get_pulls(created: list, updated: list, merged: list):
     pulls = []
 
     for i in range(len(created)):
@@ -107,6 +115,7 @@ def get_pulls(created: list, updated: list):
 
         pull.created = created[i]
         pull.updated = updated[i]
+        pull.merged = merged[i]
 
         pulls.append(pull)
     return pulls

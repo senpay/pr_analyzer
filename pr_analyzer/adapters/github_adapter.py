@@ -38,6 +38,7 @@ def _convert_pull_request(pull: github.PullRequest) -> PullRequest:
     pr = PullRequest()
     pr.created = pull.created_at
     pr.updated = pull.updated_at
+    pr.closed = pull.closed_at
     pr.merged = pull.merged_at
     pr.title = pull.title
     pr.author = pull.user

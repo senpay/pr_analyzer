@@ -8,7 +8,8 @@ from pr_analyzer.common import print_info_message
 
 def print_prs_statistics(url: str):
     prs_stats = get_prs_statistics(url)
-    print(f'Open PRs count: {prs_stats[0]}, Closed PRs count: {prs_stats[1]}')
+    print(f'Open PRs count: {prs_stats[0]}, Closed(merged) PRs count: {prs_stats[1]}, '
+          f'Closed(not merged) PRs count: {prs_stats[2]}')
 
 
 def print_prs_leadtime_statistics(url: str):
