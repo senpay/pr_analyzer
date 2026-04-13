@@ -1,4 +1,4 @@
-pytest==3.0.7
+pytest==9.0.3
 pytest-cov==2.5.1
 PyGithub==1.44
 flake8==3.7.9
